@@ -16,12 +16,15 @@ class PagesController extends Controller
         return view('pages.index') ->with('title',$title);
     }
 
-    public function services(){
+    public function service(){
         $data = array(
             'title' => 'Services',
-            'services' => ['Web Design', 'Programming', 'SEO']
+            'service' => ['Web Design', 'Programming', 'SEO']
         );
-        return view('pages.services')->with($data);
+        
+        return view('pages.index', $data);
+        
+ 
     }
    
 
